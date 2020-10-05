@@ -3,6 +3,7 @@ export function trackEvent(action, data){
     if(mixpanel && window.__mmMetametrics){
         const category = action.category
         delete action.category
+        console.log('MMM', 'mixpanel.track')
         mixpanel.track(
             category,
             {...action, ...data},
