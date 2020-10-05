@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 export function trackEvent(action, data){
+	console.log('MMM', 'trackEvent', mixpanel)
     if(mixpanel && window.__mmMetametrics){
         const category = action.category
         delete action.category
